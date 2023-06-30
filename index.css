@@ -1,0 +1,47 @@
+*{
+    background-image:url("Symbol\ 3\ copy.png");
+    background-size: cover;
+}
+
+#i1{
+    position: absolute;
+    height: 120px;
+    width: 150px;
+    right: 41px;
+    bottom: 232px;
+    z-index: 4;
+    opacity: 1;
+    transition: bottom 0.3s ease-in-out;
+}
+
+#i3{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    right: 15px;
+    bottom: 32px;
+    z-index: 2;
+}
+
+#i2{
+    position: absolute;
+    height: 100px;
+    width: 150px;
+    right: 212.5px;
+    bottom: 85px;
+    z-index: 3;
+}
+
+.balloons{
+    /* display: none; */
+    visibility: hidden;
+}
+
+#balloon{
+    position: absolute;
+    bottom: 180px;
+    right: 320px;
+}
+
+
+  
