@@ -24,6 +24,7 @@ pumpHandle.addEventListener('click', function () {
     balloon.style.zIndex = '10';
 
     var bol = true;
+    
     if (bol == true) {
         pumpBody.style.zIndex = 2;
         pumpHandle.style.zIndex = 1;
@@ -67,6 +68,7 @@ pumpHandle.addEventListener('click', function () {
         // Check if balloon is fully inflated
         if (balloonSize >= 120) {
             startBalloonFlying();
+            ba
         }
     }
 });
@@ -75,6 +77,7 @@ pumpHandle.addEventListener('click', function () {
 balloon.addEventListener('click', function () {
     if (balloonFlying) {
         burstBalloon();
+        // balloon=changeColor();
     }
 });
 
@@ -128,21 +131,24 @@ function startBalloonFlying() {
 function burstBalloon() {
     clearInterval(balloonInterval); // Clear the balloon flying interval
     balloonFlying = false;
-
+    
     // Reset balloon size and position
     balloonSize = 0;
     balloon.style.width = balloonSize + 'px';
     balloon.style.height = balloonSize + 'px';
-    balloon.style.left = '0';
-    balloon.style.top = '0';
+    changeColor();  
 
-    // Change balloon color
+    
+}
+
+// Change balloon color
+function changeColor() {
     currentColorIndex = (currentColorIndex + 1) % 10;
     //   var balloonColor = balloonColors[currentColorIndex];
     var balloonImage = "Symbol 10000" + currentColorIndex + '.png';
-    balloon.src = balloonImage;
+    balloon.src = balloonImage; 
+    return balloon;
 }
-
 
 
 
